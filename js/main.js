@@ -1,5 +1,16 @@
 const tabs = [...document.querySelectorAll('[role="tab"]')];
 const panels = [...document.querySelectorAll('[role="tabpanel"]')];
+const brandLogo = document.getElementById('brand-logo');
+const logos = {
+  suministros: {
+    src: 'assets/logo_isystems_ajustado_dark.svg',
+    alt: 'ISYSTEMS S.A.S. — Suministros, Logística & Soluciones'
+  },
+  gestion: {
+    src: 'assets/logo_isystems_sistemas_dark.svg',
+    alt: 'ISYSTEMS S.A.S. — Sistemas de Gestión'
+  }
+};
 
 function activateTab(tab, updateHash = true) {
   const selectedPanel = document.getElementById(tab.getAttribute('aria-controls'));
@@ -20,6 +31,12 @@ function activateTab(tab, updateHash = true) {
     panel.classList.toggle('is-active', active);
     panel.hidden = !active;
   });
+
+  const logo = logos[tab.dataset.tab];
+  if (brandLogo && logo) {
+    brandLogo.src = logo.src;
+    brandLogo.alt = logo.alt;
+  }
 
   if (updateHash) {
     history.replaceState(null, '', `#${tab.dataset.tab}`);
