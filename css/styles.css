@@ -105,7 +105,7 @@ a {
   z-index: 1;
   width: min(1120px, 90%);
   margin: 0 auto;
-  padding: 68px 0 74px;
+  padding: 28px 0 64px;
 }
 
 .eyebrow {
@@ -200,11 +200,11 @@ h4 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
-  margin-bottom: 27px;
+  margin-bottom: 48px;
   padding: 7px;
-  border: 1px solid var(--line);
+  border: 1px solid rgb(125 211 252 / 24%);
   border-radius: 15px;
-  background: #eaf0f7;
+  background: rgb(6 16 31 / 75%);
 }
 
 .tab {
@@ -216,7 +216,7 @@ h4 {
   padding: 12px 18px;
   border: 0;
   border-radius: 10px;
-  color: #596a81;
+  color: #d3e2f5;
   background: transparent;
   font-weight: 800;
   cursor: pointer;
@@ -224,7 +224,8 @@ h4 {
 }
 
 .tab:hover {
-  color: var(--blue);
+  color: var(--white);
+  background: rgb(125 211 252 / 12%);
 }
 
 .tab.is-active {
@@ -234,7 +235,7 @@ h4 {
 }
 
 .tab-number {
-  color: var(--electric);
+  color: var(--sky);
   font-size: .76rem;
   letter-spacing: .08em;
 }
@@ -502,11 +503,10 @@ h4 {
 }
 
 .site-footer {
-  position: relative;
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 25px max(5vw, 24px) 48px;
+  padding: 25px max(5vw, 24px);
   color: #d8e6f5;
   background: var(--navy);
 }
@@ -529,15 +529,6 @@ h4 {
 
 .footer-phone {
   text-decoration: none;
-}
-
-.demo-label {
-  position: absolute;
-  right: max(5vw, 24px);
-  bottom: 4px;
-  margin: 0;
-  color: #89a0bd;
-  font-size: .72rem;
 }
 
 :focus-visible {
@@ -563,7 +554,7 @@ h4 {
   }
 
   .hero-inner {
-    padding: 58px 0;
+    padding: 22px 0 48px;
   }
 
   .portfolio-section {
@@ -572,6 +563,7 @@ h4 {
 
   .tabs {
     grid-template-columns: 1fr;
+    margin-bottom: 36px;
   }
 
   .tab {
@@ -603,7 +595,6 @@ h4 {
 
   .site-footer {
     flex-wrap: wrap;
-    padding-bottom: 54px;
   }
 
   .site-footer > a {

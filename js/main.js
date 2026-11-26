@@ -44,7 +44,10 @@ function activateTab(tab, updateHash = true) {
 }
 
 tabs.forEach((tab, index) => {
-  tab.addEventListener('click', () => activateTab(tab));
+  tab.addEventListener('click', () => {
+    activateTab(tab);
+    document.getElementById('portafolios').scrollIntoView();
+  });
 
   tab.addEventListener('keydown', (event) => {
     const movesForward = event.key === 'ArrowRight' || event.key === 'ArrowDown';
